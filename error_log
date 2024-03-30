@@ -1,0 +1,1 @@
+[27-Jan-2024 21:43:47 Asia/kolkata] PHP Fatal error:  Cannot redeclare SiteModel::getRooms() in /home/webfire1/public_html/rent/application/models/SiteModel.php on line 27
