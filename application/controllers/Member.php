@@ -26,7 +26,7 @@ class Member extends CI_Controller{
                     }
                     $this->db->insert('ab_property',$post);
                     $this->session->set_flashdata('success_msg','Property added successfully.');
-                    redirect(current_url());
+                    redirect(base_url('property'));
                 break;
             }
         }else{
