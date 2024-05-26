@@ -6,7 +6,7 @@
                     <div class="image"><a href="/admin"><img src="<?php echo base_url('theme/'); ?>assets/images/profile_av.jpg" alt="User"></a></div>
                     <div class="detail">
                         <h4><?=@$this->session->name;?></h4>
-                        <small>Admin</small>                        
+                        <small><?=@$this->session->type;?></small>                        
                     </div>
                     <!--<a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a>-->
                     <!--<a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a>-->
@@ -16,39 +16,37 @@
                 </div>
             </li>
             <li class="header">MAIN</li>
-            <li class="active open"><a href="/admin"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>            
+            <li class="active open"><a href="/member"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>            
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Property</span> </a>
                 <ul class="ml-menu">
-                    <li><a href="property-list.html">Property List</a></li>
-                    <li><a href="property-list3.html">3 Column</a></li>
-                    <li><a href="property-list4.html">4 Column</a></li>                        
-                    <li><a href="add-property.html">Add Property</a></li>
-                    <li><a href="property-detail.html">Property Detail</a></li>
+                    <li><a href="<?php echo base_url('member/property'); ?>">Property List</a></li>
+                    <li><a href="<?php echo base_url('member/property/add'); ?>">Add Property</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Manage Members</span> </a>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Rooms</span> </a>
                 <ul class="ml-menu">
-                    <li><a href="<?=base_url('admin/add_member')?>">Add Member</a></li>
-                    <li><a href="<?=base_url('admin/list_member')?>">List Member</a></li>
+                    <li><a href="<?php echo base_url('member/room/add'); ?>">Add Rooms</a></li>
+                    <li><a href="<?php echo base_url('member/room'); ?>">All Rooms</a></li>
                     
                 </ul>
-            </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Types</span> </a>
+            </li><li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Tenant</span> </a>
                 <ul class="ml-menu">
-                    <li><a href="apartment.html">Apartment</a></li>
-                    <li><a href="office.html">Office</a></li>
-                    <li><a href="shop.html">Shop</a></li>                        
-                    <li><a href="villa.html">Villa</a></li>
-                </ul>
-            </li><li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Agents</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="agent.html">All Agents</a></li>
-                    <li><a href="add-agent.html">Add Agent</a></li>                       
-                    <li><a href="profile.html">Agent Profile</a></li>
-                    <li><a href="invoices.html">Agent Invoice</a></li>
+                    <li><a href="<?php echo base_url('member/tenant/add'); ?>">Add Tenant</a></li>
+                    <li><a href="<?php echo base_url('member/tenant'); ?>">All Tenant</a></li>                       
                 </ul>
             </li>
-            <li><a href="map.html"><i class="zmdi zmdi-pin"></i><span>Map</span></a></li>
+            </li><li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Monthly Report</span> </a>
+                <ul class="ml-menu">
+                    <li><a href="<?php echo base_url('member/monthly-report/property'); ?>">Monthly Report by property</a></li>
+                    <li><a href="<?php echo base_url('member/monthly-report/room'); ?>">Monthly report by room</a></li>                       
+                    <li><a href="<?php echo base_url('member/monthly-report/download-blank-sheet'); ?>">Download Blank Sheet</a></li>
+                    <li><a href="<?php echo base_url('member/monthly-report/payment-collection'); ?>">Reading</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="<?php echo base_url('member/complaint/tenant'); ?>"><i class="zmdi zmdi-pin"></i><span>Tenant Complaint</span></a></li>
+            
+            <?/*
             <li><a href="reports.html"><i class="zmdi zmdi-file-text"></i><span>Reports</span></a></li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> </a>
                 <ul class="ml-menu">
@@ -90,6 +88,7 @@
                 </ul>
             </li>
             <li class="header">Extra</li>
+            
             <li>
                 <div class="progress-container progress-primary m-t-10">
                     <span class="progress-badge">Traffic this Month</span>
@@ -108,6 +107,7 @@
                     </div>
                 </div>
             </li>
+            */?>
         </ul>
     </div>
 </aside>

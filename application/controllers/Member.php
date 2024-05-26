@@ -2,13 +2,19 @@
 class Member extends CI_Controller{
     
     function __construct(){
-        parent::__construct();
-        if($this->session->has_userdata('type') == false && $this->session->type != 'Member'){
-            redirect('/');
-        }
-        $this->load->library('upload');
-        $this->load->library('pagination');
+    parent::__construct();
+    
+    // Debugging statement, should be removed or commented out in production
+    // echo $this->session->type; exit;
+    
+    if (!$this->session->has_userdata('type') || $this->session->type != 'Member') {
+        redirect('/');
     }
+    
+    $this->load->library('upload');
+    $this->load->library('pagination');
+}
+
     
     public function index(){
         $this->_render();
